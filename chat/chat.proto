@@ -1,0 +1,19 @@
+syntax = "proto3";
+enum MessageType {
+  SEND_MESSAGE          = 0;
+  SEND_MESSAGE_RESPONSE = 1;
+  USER_JOINED           = 2;
+}
+
+message SendMessage {
+  string username = 1;
+  string text     = 2;
+}
+
+message SendMessageResponse {
+  bool success = 1;
+}
+
+message UserJoined {
+  string username = 1;
+}
